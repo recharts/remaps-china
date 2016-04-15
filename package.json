@@ -57,7 +57,7 @@
   "scripts": {
     "build": "babel src --out-dir build",
     "clean": "rimraf build",
-    "prepublish": "npm run clean && npm run check:src && npm run build",
+    "prepublish": "npm run clean && npm run build",
     "demo": "./node_modules/.bin/webpack-dev-server --host 0.0.0.0 --progress --port 3000  --colors --content-base demo --hot --inline --config demo/webpack.config.js",
     "test": "./node_modules/.bin/mocha --compilers js:babel/register --recursive",
     "test-cov": "./node_modules/.bin/babel-node ./node_modules/.bin/isparta --report html cover _mocha -- --recursive",
