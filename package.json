@@ -1,0 +1,62 @@
+{
+  "name": "remaps-china",
+  "version": "0.0.1",
+  "description": "React maps(china)",
+  "main": "src/index.js",
+  "keywords": [
+    "react",
+    "reactjs",
+    "map",
+    "china"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/recharts/remaps-china.git"
+  },
+  "author": "twobin",
+  "bugs": {
+    "url": "https://github.com/recharts/remaps-china/issues"
+  },
+  "homepage": "https://github.com/recharts/remaps-china.git",
+  "peerDependencies": {
+    "react": "0.14.3",
+    "react-dom": "0.14.3"
+  },
+  "dependencies": {
+    "d3": "^3.5.5",
+    "immutable": "^3.7.5"
+  },
+  "devDependencies": {
+    "babel-core": "6.3.21",
+    "babel-eslint": "5.0.0-beta6",
+    "babel-loader": "6.2.0",
+    "babel-plugin-transform-export-extensions": "6.3.13",
+    "babel-polyfill": "^6.3.14",
+    "babel-preset-es2015": "6.3.13",
+    "babel-preset-react": "6.3.13",
+    "babel-preset-stage-0": "6.3.13",
+    "chai": "3.4.1",
+    "eslint": "1.10.3",
+    "eslint-config-airbnb": "2.1.1",
+    "eslint-plugin-react": "3.13.0",
+    "history": "1.17.0",
+    "ima.js-babel6-polyfill": "^0.1.0",
+    "isparta": "4.0.0",
+    "mocha": "2.3.4",
+    "node-libs-browser": "0.5.3",
+    "react": "0.14.3",
+    "react-dom": "0.14.3",
+    "react-hot-loader": "1.3.0",
+    "react-router": "1.0.3",
+    "require-dir": "0.3.0",
+    "webpack": "1.12.9",
+    "webpack-dev-server": "1.14.0"
+  },
+  "scripts": {
+    "demo": "./node_modules/.bin/webpack-dev-server --host 0.0.0.0 --progress --port 3000  --colors --content-base demo --hot --inline --config demo/webpack.config.js",
+    "test": "./node_modules/.bin/mocha --compilers js:babel/register --recursive",
+    "test-cov": "./node_modules/.bin/babel-node ./node_modules/.bin/isparta --report html cover _mocha -- --recursive",
+    "lint": "./node_modules/.bin/eslint src test"
+  },
+  "license": "MIT"
+}
