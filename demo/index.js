@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Router, {Route} from 'react-router';
+import {Router, Route, hashHistory} from 'react-router';
 import App from './container/App';
 
 const routes = (
@@ -12,4 +12,4 @@ Router.run(routes, function (Handler, state) {
 });
 */
 
-ReactDOM.render(<Router>{routes}</Router>, document.getElementById('root'));
+ReactDOM.render(<Router history={hashHistory}>{routes}</Router>, document.getElementById('root'));

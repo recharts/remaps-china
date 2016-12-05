@@ -21,7 +21,7 @@ export default class SouthSea extends Component {
     } = this.props;
 
     return (
-      <g className="southsea" transform={"translate(" + (width - 90) + ", " + (height - 110) + ") scale(0.4, 0.4)"}>
+      <g transform={"translate(" + (width - 90) + ", " + (height - 110) + ") scale(0.4, 0.4)"}>
         <line strokeWidth={'3px'} stroke={defaultColor} y2="7" x2="145" y1="7" x1="20" />
         <line strokeWidth={'3px'} stroke={defaultColor} y2="24" x2="6" y1="7" x1="20" />
         <line strokeWidth={'3px'} stroke={defaultColor} y2="195" x2="145" y1="7" x1="145" />
