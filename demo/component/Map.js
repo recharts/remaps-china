@@ -52,6 +52,10 @@ export default React.createClass({
     };
   },
 
+  componentDidMount() {
+    console.log(this.temp.getProvinceCenter('福建'));
+  },
+
   popupContent(data) {
     if (data) {
       return (
@@ -82,6 +86,7 @@ export default React.createClass({
       <div className='simple-maps'>
         <MapContainer
           className={"mapContainer"}
+          ref={(node) => { this.temp = node; }}
           width= {width}
           extData= {newData}
           nameKey= {'name'}

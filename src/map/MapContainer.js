@@ -8,7 +8,7 @@ import {Projection as projectionFunc} from './core/Projection';
 import {GeoPath} from './core/GeoPath';
 import {TileFunc} from './core/TileFunc';
 import ZoomControl from './core/ZoomControl';
-import {formatName} from './utils/FormatHelper';
+import {formatName, searchIndex} from './utils/FormatHelper';
 import Popup from './core/Popup';
 import {OrderedMap, Map} from 'immutable';
 import ChinaGeoOpt from '../data/china';
@@ -192,6 +192,10 @@ export default class MapContainer extends Component {
     })
   }
 
+  // getProvinceCenter(name) {
+  //   console.log(name);
+  // }
+
   render() {
     const {
       mapName,
@@ -307,6 +311,18 @@ export default class MapContainer extends Component {
       <div ref="mapContainer" className={className} style= {styleContainer}>
         <Container
           {...this.props}
+          ref={
+            () => {
+              this.getProvinceCenter = (name) => {
+                const centerPos = searchIndex(ChinaGeoOpt, 'center', name, 'province');
+                if (!centerPos) {
+                  return {};
+                }
+                const loc = proj(centerPos);
+                return {x: loc[0], y: loc[1]};
+              };
+            }
+          }
           width= {width}
           height= {height}
           projection = {proj}
